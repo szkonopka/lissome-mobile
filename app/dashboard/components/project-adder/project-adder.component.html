@@ -1,0 +1,23 @@
+<Page>
+    <FlexboxLayout class="page">
+        <StackLayout class="form">
+            <StackLayout class="input-field">
+                <TextField hint="Name" 
+                class="input"
+                [(ngModel)]="model.username" 
+                #username="ngModel"
+                autocapitalizationType="none"
+                autocorrect="false"></TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField hint="Description" 
+                class="input"
+                [(ngModel)]="model.password"
+                #password="ngModel"
+                autocapitalizationType="none"
+                secure="true"></TextField>
+            </StackLayout>
+                <Button text="Create'" class="lissome-btn"></Button>
+            </StackLayout>    
+        </FlexboxLayout>
+    </Page>

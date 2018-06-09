@@ -1,0 +1,38 @@
+<Page>
+    <FlexboxLayout class="page">
+        <StackLayout class="form">
+            <Image src="~/assets/img/app-logo.png" height="" class="logo"></Image>
+            <StackLayout class="input-field">
+                <TextField hint="Username" 
+                class="input"
+                [(ngModel)]="model.username" 
+                #username="ngModel"
+                autocapitalizationType="none"
+                autocorrect="false"></TextField>
+            </StackLayout>
+            <StackLayout *ngIf="!isLoggingIn" class="input-field">
+                <TextField hint="Email" 
+                class="input"
+                keyboardType="email"
+                [(ngModel)]="model.email"
+                #password="ngModel"
+                autocapitalizationType="none"></TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField hint="Password" 
+                class="input"
+                [(ngModel)]="model.password"
+                #password="ngModel"
+                autocapitalizationType="none"
+                secure="true"></TextField>
+            </StackLayout>
+            <Button [text]="isLoggingIn ? 'Log in' : 'Sign up'" class="lissome-btn" (tap)="submit()"></Button>
+        </StackLayout>    
+        <Label (tap)="toggleForm()" class="login-label">
+            <FormattedString>
+                <Span [text]="isLoggingIn ? 'Dont have an accout? ' : 'Back to Login'"></Span>
+                <Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
+            </FormattedString>
+        </Label>
+    </FlexboxLayout>
+</Page>

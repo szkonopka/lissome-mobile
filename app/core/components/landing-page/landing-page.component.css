@@ -1,0 +1,39 @@
+StackLayout {
+    padding-bottom: 15;
+    background-color: white;
+}
+
+.logo {
+    height: 90;
+    margin-bottom: 12;
+}
+
+Image {
+    margin-top: 5;
+    margin-bottom: 20;
+}
+
+Button, TextField {
+    margin-bottom: 10;
+    width: 300;
+    text-align: center;
+}
+
+.input {
+    font-size: 18;
+}
+
+.input-field {
+    margin-bottom: 25;
+}
+
+.bold {
+    color: black;
+    font-weight: bold;
+}
+
+.login-label {
+    color: gray;
+    margin-bottom: 14;
+    font-size: 16;
+}

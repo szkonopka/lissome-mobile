@@ -1,0 +1,58 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+
+Page {
+    color: #252635;
+    background-color: #fafbfd;
+}
+
+.lissome-btn {
+    border-radius: 15px;
+    background: white;
+    border-color: #6ACB90;
+    border-width: 1;
+    color: #252635;
+}
+
+.lissome-btn_filled {
+    border-radius: 15px;
+    background: #6ACB90;
+    border-width: 1;
+    color: white;
+    font-weight: bold;
+}
+
+.page {
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    flex-grow: 2;
+    vertical-align: middle;
+    margin-left: 30;
+    margin-right: 30;
+}
+
+Page {
+    background-color: white;
+}
+
+TextField {
+    border-color: #6ACB90;
+}
+
+Button {
+    margin-top: 10;
+    margin-bottom: 10;
+}
