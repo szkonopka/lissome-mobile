@@ -1,0 +1,33 @@
+.task {
+    padding: 15;
+    background: white;
+    border-width: 2;
+    border-color: #e6eaed;
+    margin: 15 30;
+    border-radius: 5;
+    font-size: 12
+}
+
+.lissome-btn_switcher {
+    border-color: #f7f8f9;
+    background: #f7f8f9;
+    width: 30;
+    height: 30;
+}
+
+.lissome-icon {
+    width: 30;
+    height: 30;
+}
+
+.task__name {
+    font-size: 14;
+}
+
+.lissome-btn_switcher-right {
+    margin-left: 10;
+}
+
+.lissome-btn_switcher-left {
+    margin-right: 10;
+}

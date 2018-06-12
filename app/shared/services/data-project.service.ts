@@ -97,7 +97,6 @@ export class DataProjectService {
   public loadProjects() {
     this.projectService.getAllAssignedTo(this.getUserID()).subscribe(
       projects => { 
-        console.log(projects);
         this.projects = projects;
         this.loadSprintFromProject();
       }
@@ -112,6 +111,7 @@ export class DataProjectService {
           task.Users = users;
         });
       }
+      console.log(tasks);
     })
   }
 

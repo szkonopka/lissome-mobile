@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
         private page: Page
     ) 
     { 
-        page.actionBarHidden = true;
+        
     }
 
     ngOnInit(): void {

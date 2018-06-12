@@ -1,16 +1,15 @@
 <StackLayout>
-    <Label [text]="this.dataUserService.getUsername()"></Label>
-    <Label text="Projects"></Label>
-    <Label text="test"></Label>
-    <Button [nsRouterLink]="['/project-adder']" text="New project" class="lissome-btn lissome-btn_filled"></Button>
-    <ListView [items]="this.dataProjectService.projects" class="list-gtoup">
+    <Button text="+" class="lissome-btn lissome-btn_filled lissome-btn_round" [nsRouterLink]="['/project-adder']"></Button>
+    <ListView separatorColor="white" [items]="this.dataProjectService.projects" class="list-group list-group_project">
         <ng-template let-project="item">
             <!--<GridLayout columns="auto, *, auto" rows="auto" class="list-group-item project">-->
-            <StackLayout class="list-group-item project">
-                <Label row="0" [text]="project.SprintlessTasks.length + ' tasks'" class="project__amount"></Label>
-                <Label row="1" [text]="project.Name" class="list-group-item" class="h2 project__name"></Label>
-                <Label row="2" *ngIf="project.ActiveSprintObject != null" [text]="project.ActiveSprintObject.Name" class="list-group-item" class="h3 project__sprint"></Label>
-                <Progress value="25" maxValue="100" class="m-20"></Progress>
+            <StackLayout class="">
+                <GridLayout columns="auto, *" rows="auto, auto, auto, *, auto" class="list-group-item project" [nsRouterLink]="['/projects', project.Slug, project.Id]">
+                    <Label row="0" [text]="project.SprintlessTasks.length + ' tasks'" class="project__amount"></Label>
+                    <Label row="1" [text]="project.Name" class="list-group-item" class="h2 project__name"></Label>
+                    <Label row="2" *ngIf="project.ActiveSprintObject != null" [text]="project.ActiveSprintObject.Name" class="list-group-item" class="h3 project__sprint"></Label>
+                    <Progress row="3" value="25" maxValue="100" class="m-20"></Progress>
+                </GridLayout>
             </StackLayout>
             <!--</GridLayout>-->
         </ng-template>

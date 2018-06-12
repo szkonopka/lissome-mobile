@@ -1,0 +1,36 @@
+.project {
+    background-color: #fafbfd;
+    font-size: 15;
+}
+
+.menu-container {
+    background: white;
+    border-color: #e6eaed;
+    border-width: 0 0 3 0;
+}
+
+.menu__item {
+    background: white;
+    color: #6c8795;
+    border-width: 0 0 3 0;
+    border-color: #e6eaed;
+}
+
+.menu__item_active {
+    color: #252635;
+    border-width: 0 0 3 0;
+    border-color: #6ACB90;
+}
+
+Button {
+    background: pink;
+}
+
+.project-board {
+    height: 100%;
+}
+
+TabView {
+    selected-tab-text-color: #6ACB90;
+    android-selected-tab-highlight-color: #6ACB90;
+}

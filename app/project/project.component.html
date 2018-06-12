@@ -1,0 +1,27 @@
+<Page class="project">
+    <ActionBar [title]="this.dataProjectService.selectedProject.Name">
+        <NavigationButton icon="res://ic_menu_black_24dp" tap=(showNavigation)></NavigationButton>
+    </ActionBar>
+    <TabView selectedIndex="0" sdkExampleTitle sdkToggleNavButton>
+        <StackLayout *tabItem="{title: 'Tasks list'}">
+        <ScrollView>
+            <FlexboxLayout class="project-board">
+                <ns-backlog></ns-backlog>
+            </FlexboxLayout>
+        </ScrollView>
+        </StackLayout>
+
+        <StackLayout *tabItem="{title: this.dataProjectService.selectedProject.ActiveSprintObject.Name }">
+        <ScrollView>
+            <FlexboxLayout class="project-board">
+                <ns-sprint-tasks></ns-sprint-tasks>
+            </FlexboxLayout>
+        </ScrollView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: this.dataProjectService.selectedProject.ActiveSprintObject.Name }">
+        <ScrollView>
+            <ns-kanban-board></ns-kanban-board>
+        </ScrollView>
+        </StackLayout>
+    </TabView>
+</Page>

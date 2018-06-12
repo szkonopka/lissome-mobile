@@ -1,0 +1,16 @@
+<StackLayout>
+    <GridLayout columns="auto, *, auto" rows="auto, auto" class="list-group-item task">
+        <StackLayout row="0" col="0" *ngIf="task.Sprint !== null" class="lissome-btn lissome-btn_round lissome-btn_switcher lissome-btn_switcher-left" (tap)="removeFromSprint(task)">
+            <Image row="1" src="res://ic_chevron_left_black_24dp" class="lissome-icon"></Image>  
+        </StackLayout>
+        <Label row="0" col="1" [text]="task.Name" class="h2" class="task__name"></Label>        
+        <StackLayout row="0" col="2" *ngIf="task.Sprint === null" class="lissome-btn lissome-btn_round lissome-btn_switcher lissome-btn_switcher-right" (tap)="assignToSprint(task)">
+            <Image row="0" src="res://ic_chevron_right_black_24dp" class="lissome-icon"></Image>
+        </StackLayout>
+        <StackLayout [items]="task.Users" row="1">
+            <ng-template let-user="item">
+                <Label [text]="user.Username[0]" class="lissome-btn lissome-btn_round lissome-btn_switcher lissome-btn_switcher-right"></Label>
+            </ng-template>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>
