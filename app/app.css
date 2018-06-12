@@ -32,17 +32,37 @@ Page {
     font-weight: bold;
 }
 
+.lissome-btn_round {
+    width: 40;
+    height: 40;
+    border-radius: 50%;
+}
+
 .page {
     align-items: center;
     flex-direction: column;
 }
 
-.form {
+.form, .landing-page__intro {
     flex-grow: 2;
     vertical-align: middle;
     margin-left: 30;
     margin-right: 30;
 }
+
+.input {
+    border-radius: 0;
+    border-width: 0 0 1 0;
+    border-color: #6ACB90;
+}
+
+TextView {
+    height: 100;
+    border-width: 1 1 1 1;
+    border-color: #6ACB90;
+    border-radius: 5; 
+}
+
 
 Page {
     background-color: white;

@@ -14,6 +14,7 @@ import { ProjectRoleSerializer, ProjectRoleService } from '../core/services/proj
 import { DataUserService } from '../shared/services/data-user.service';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { ProjectAdderComponent } from './components/project-adder/project-adder.component';
+import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ProjectAdderComponent } from './components/project-adder/project-adder.
     RouterModule,
     FormsModule,
     SharedModule,
-    NativeScriptModule
+    NativeScriptModule,
+    NativeScriptRouterModule
   ],
   declarations: [
     DashboardComponent,

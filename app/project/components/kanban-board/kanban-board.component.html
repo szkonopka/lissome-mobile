@@ -1,0 +1,22 @@
+<!--<Page class="project">
+        <ActionBar [title]="this.dataProjectService.selectedProject.Name">
+            <NavigationButton icon="res://ic_menu_black_24dp" tap=(showNavigation)></NavigationButton>
+        </ActionBar>
+    -->   
+        <TabView selectedIndex="0" sdkExampleTitle sdkToggleNavButton>
+            <ng-template *ngFor="let taskState of dataTaskService.taskStates">
+            <StackLayout *tabItem="{title: taskState.Name}">
+                <ScrollView>
+                    <FlexboxLayout class="project-board">
+                        <ListView separatorColor="white" [items]="this.dataProjectService.selectedProject.ActiveSprintObject.ActiveTasks" class="list-group list-group_project">
+                        <ng-template let-task="item">
+                            <ns-task [task]="task"></ns-task>        
+                        </ng-template>
+                        </ListView>
+                    </FlexboxLayout>
+                </ScrollView>
+            </StackLayout>
+        </ng-template>
+        </TabView>
+<!--</Page>-->
+    

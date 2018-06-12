@@ -1,23 +1,27 @@
-<Page>
+<Page class="project-adder">
+    <Page.actionbar>
+        <ActionBar>
+            <NavigationButton text="Go back" android.systemIcon="ic_menu_back"></NavigationButton>>
+        </ActionBar>
+    </Page.actionbar>
     <FlexboxLayout class="page">
         <StackLayout class="form">
             <StackLayout class="input-field">
                 <TextField hint="Name" 
                 class="input"
-                [(ngModel)]="model.username" 
+                [(ngModel)]="model.name" 
                 #username="ngModel"
                 autocapitalizationType="none"
                 autocorrect="false"></TextField>
             </StackLayout>
             <StackLayout class="input-field">
-                <TextField hint="Description" 
-                class="input"
-                [(ngModel)]="model.password"
+                <TextView hint="Description" 
+                [(ngModel)]="model.description"
                 #password="ngModel"
                 autocapitalizationType="none"
-                secure="true"></TextField>
+                secure="true"></TextView>
             </StackLayout>
-                <Button text="Create'" class="lissome-btn"></Button>
+                <Button text="Create" class="lissome-btn lissome-btn_filled"></Button>
             </StackLayout>    
         </FlexboxLayout>
     </Page>

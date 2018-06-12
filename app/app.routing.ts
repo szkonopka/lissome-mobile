@@ -8,11 +8,14 @@ import { LandingPageComponent } from './core/components/landing-page/landing-pag
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from "./core/guards/authentication.guard";
 import { ProjectAdderComponent } from "./dashboard/components/project-adder/project-adder.component";
+import { ProjectComponent } from "./project/project.component";
+import { ProjectResolve } from "./shared/resolvers/project-resolve";
 
 const routes: Routes = [
     { path: "", component: LandingPageComponent, pathMatch: "full" },
     { path: "main", component: DashboardComponent, canActivate: [AuthenticationGuard] },
-    { path: "project-adder", component: ProjectAdderComponent, canActivate: [AuthenticationGuard] }
+    { path: "project-adder", component: ProjectAdderComponent },
+    { path: "projects/:slug/:id", pathMatch: 'prefix', component: ProjectComponent, resolve: { project: ProjectResolve }}
 ];
 
 @NgModule({

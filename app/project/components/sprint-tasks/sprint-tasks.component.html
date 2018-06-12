@@ -1,0 +1,5 @@
+<ListView separatorColor="white" [items]="this.dataProjectService.selectedProject.ActiveSprintObject.ActiveTasks" class="list-group list-group_project">
+    <ng-template let-task="item">
+        <ns-task [task]="task"></ns-task>
+    </ng-template>
+</ListView>

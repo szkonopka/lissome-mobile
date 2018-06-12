@@ -3,8 +3,31 @@ StackLayout {
     background-color: white;
 }
 
+.landing-page {
+    padding-bottom: 60;
+}
+
+.landing-page__intro {
+    margin-top: 30;
+    text-align: center;
+}
+
+.landing-page__intro h1 {
+    font-size: 14;
+    font-weight: bold;
+}
+
+.landing-page__intro p {
+    font-size: 12;
+}  
+
+.landing-page__intro Label {
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
 .logo {
-    height: 90;
+    height: 60;
     margin-bottom: 12;
 }
 
@@ -21,6 +44,7 @@ Button, TextField {
 
 .input {
     font-size: 18;
+    text-align: left;
 }
 
 .input-field {
